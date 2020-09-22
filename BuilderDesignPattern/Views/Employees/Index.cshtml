@@ -1,0 +1,54 @@
+﻿@model IEnumerable<BuilderDesignPattern.Models.Employee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Employees Inforamtion</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create"><i class="fa fa-plus"></i>Add User</a>
+</p>
+<table class="table table-responsive table-primary">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Designation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ComputerDetails)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ComputerSystemConfiguration)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Designation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ComputerDetails)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ComputerSystemConfiguration)
+            </td>
+            <td>
+                <a asp-action="BuildComputerSystem" asp-route-id="@item.Id">Build PC</a> |
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

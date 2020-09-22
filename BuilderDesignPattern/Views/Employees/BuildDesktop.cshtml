@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewData["Title"] = "Desktop Configuare ";
+}
+
+<hr />
+<div class="row">
+
+    <div class="col-md-6 offset-3">
+        <div class="card-header bg-primary"><h1 class="text-center">Build Your Desktop</h1></div>
+
+        <form asp-action="BuildDesktop">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" value="@ViewBag.employeeId" id="employeeId" name="employeeId" />
+
+            <div class="form-group">
+                <label for="RAM" class="control-label">RAM</label>
+                <select class="form-control" name="RAM" id="RAM">
+                    <option>Select</option>
+                    <option value="2GB">2GB</option>
+                    <option value="4GB">4GB</option>
+                    <option value="6GB">6GB</option>
+                    <option value="8GB">8GB</option>
+                    <option value="16GB">16GB</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="HardDrive" class="control-label">Hard Disk</label>
+                <select class="form-control" name="HardDrive" id="HardDrive">
+                    <option>Select</option>
+                    <option value="100GB">100GB</option>
+                    <option value="200GB">200GB</option>
+                    <option value="300GB">300GB</option>
+                    <option value="400GB">400GB</option>
+                    <option value="500GB">500GB</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="GraphicsCard" class="control-label"> Graphics Card </label>
+                <select class="form-control" name="GraphicsCard" id="GraphicsCard">
+                    <option>Select</option>
+                    <option value="2GB">2GB</option>
+                    <option value="4GB">4GB</option>
+                    <option value="6GB">6GB</option>
+                    <option value="8GB">8GB</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Mouse" class="control-label">Mouse Brand </label>
+                <select class="form-control" name="Mouse" id="Mouse">
+                    <option>Select</option>
+                    <option value="Dell">Dell</option>
+                    <option value="ASUS">ASUS</option>
+                    <option value="ACER">ACER</option>
+                    <option value="WALTON">WALTON</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Keyborad" class="control-label"> Keyboard Brand </label>
+                <select class="form-control" name="Keyborad" id="Keyborad">
+                    <option>Select</option>
+                    <option value="Dell">Dell</option>
+                    <option value="ASUS">ASUS</option>
+                    <option value="ACER">ACER</option>
+                    <option value="WALTON">WALTON</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Monitor" class="control-label"> Monitor Brand </label>
+                <select class="form-control" name="Monitor" id="Monitor">
+                    <option>Select</option>
+                    <option value="Dell">Dell</option>
+                    <option value="ASUS">ASUS</option>
+                    <option value="ACER">ACER</option>
+                    <option value="WALTON">WALTON</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary btn-group-lg" />
+            </div>
+        </form>
+</div>
+</div>
